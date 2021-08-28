@@ -8,7 +8,7 @@ document.getElementById("generateButton").addEventListener("click", () => {
   var button3Link = document.getElementById("button3Link").value;
   var button3Text = document.getElementById("button3Text").value;
   var thisWebsite = document.getElementById("thisWebsite").value;
-  var youtubeVideo = document.getElementById("youtubeVideo").value;
+  var youtubeVideoId = document.getElementById("youtubeVideoId").value;
   var bodyTitle1 = document.getElementById("bodyTitle1").value;
   var bodyEmoji1 = document.getElementById("bodyEmoji1").value;
   var bodySubtitle1 = document.getElementById("bodySubtitle1").value;
@@ -117,7 +117,7 @@ document.getElementById("generateButton").addEventListener("click", () => {
           <source src="assets/video/ResponsivizeFeatureVideo.mp4" type="video/mp4">
         </video> -->
 
-        <iframe width="90%" height="380px" src="${youtubeVideo}" title="YouTube video player" frameborder="0"
+        <iframe width="90%" height="380px" src="${youtubeVideoId}" title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
 
