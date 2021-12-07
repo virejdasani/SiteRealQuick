@@ -1,5 +1,7 @@
 document.getElementById("generateButton").addEventListener("click", () => {
   var siteTitle = document.getElementById("siteTitle").value;
+  var headerLink1 = document.getElementById(headerLink1).value;
+  var headerLink2 = document.getElementById(headerLink2).value;
   var tagline = document.getElementById("tagline").value;
   var button1Link = document.getElementById("button1Link").value;
   var button1Text = document.getElementById("button1Text").value;
@@ -9,6 +11,18 @@ document.getElementById("generateButton").addEventListener("click", () => {
   var button3Text = document.getElementById("button3Text").value;
   var thisWebsite = document.getElementById("thisWebsite").value;
   var youtubeVideoId = document.getElementById("youtubeVideoId").value;
+  var indicatorButton1Text = document.getElementById(
+    "indicatorButton1Text"
+  ).value;
+  var indicatorButton2Text = document.getElementById(
+    "indicatorButton2Text"
+  ).value;
+  var indicatorButton1Link = document.getElementById(
+    "indicatorButton1Link"
+  ).value;
+  var indicatorButton2Link = document.getElementById(
+    "indicatorButton2Link"
+  ).value;
   var bodyTitle1 = document.getElementById("bodyTitle1").value;
   var bodyEmoji1 = document.getElementById("bodyEmoji1").value;
   var bodySubtitle1 = document.getElementById("bodySubtitle1").value;
@@ -28,7 +42,7 @@ document.getElementById("generateButton").addEventListener("click", () => {
   var authorWebsite = document.getElementById("authorWebsite").value;
   var email = document.getElementById("email").value;
 
-  var html = `
+  var head = `
 <!DOCTYPE html>
 
 <html lang="en">
@@ -67,63 +81,63 @@ document.getElementById("generateButton").addEventListener("click", () => {
   <script src="./scripts/smooth-scroll-commands.js"></script>
 
 </head>
+`;
 
+  // Logo of product should be in assets/logo.png
+  var navbar = `
 <body>
-
-  <!-- Used to setup downloads -->
-  <iframe id="invisible" style="display:none;"></iframe>
-
-  <!-- This is the sticky bar that moves with a scroll -->
+  <!-- This is the sticky navbar -->
   <div id="sticky-bar">
     <div id="sticky-bar-content">
       <div class="backdrop"></div>
       <div class="foreground">
         <div id="sticky-bar-squeezer">
           <a id="sticky-bar-home" href="javascript:;" onclick="return scrollToTop();">
-            <img src="./assets/appLogo.png" width="50px" height="50px">
+            <img src="./assets/logo.png" width="50px" height="50px">
             <h4>${siteTitle}</h4>
           </a>
 
           <div id="sticky-bar-links">
 
-            <!-- GitHub Sticky Link -->
-            <a href="${repo}" target="_blank">GitHub</a>
+            <!-- Sticky Link 1 -->
+            <a href="${headerLink1}" target="_blank">${headerText1}</a>
             <div class="padding"></div>
 
-            <!-- Download Sticky Link -->
-            <a href="${repo}/releases">Downloads</a>
+            <!-- Sticky Link 2 -->
+            <a href="${headerLink2}/releases">${headerText2}</a>
           </div>
         </div>
       </div>
     </div>
   </div>
+`;
 
+  var main = `
   <div id="main-padding">
     <!-- Contains all content including footer -->
     <div class="main">
-
-      <!-- ----------------------------------------------------------------------- -->
-      <!--                                Section 1                                -->
-      <!-- ----------------------------------------------------------------------- -->
       <div id="section-1" class="section-alignment">
 
         <!-- Top content -->
-        <img id="app-icon" src="./assets/appLogo.png">
+        <img id="app-icon" src="./assets/logo.png">
         <h2 id="landing-header">${siteTitle}</h2>
         <h4 id="landing-subtitle">${tagline}</h4>
         <div class="padding"></div>
+`;
+  // For localVideo, the video should be in assets/video.mp4
+  var localVideo = `
+        <video class="video" id="opening-video" width="100%" autoplay muted playsinline>
+          <source src="assets/video.mp4" type="video/mp4">
+        </video>
+  `;
 
-        <!-- <video class="video" id="opening-video" width="100%" autoplay muted playsinline>
-          <source src="assets/video/ResponsivizeFeatureVideo.mp4" type="video/mp4">
-        </video> -->
-
+  var youtubeVideo = `
         <iframe width="90%" height="380px" src="${youtubeVideoId}" title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
-
+`;
+  var downloadButtons = `
         <div class="padding-semi-large"></div>
-
-        <!-- -------------------------- App store buttons -------------------------- -->
 
         <div id="app-store-buttons">
           <!-- Download button -->
@@ -141,33 +155,31 @@ document.getElementById("generateButton").addEventListener("click", () => {
           <!-- Download button -->
           <a class="button-standard" href="${button3Link}">${button3Text}<img class="icon-link"
               src="./assets/icons/download-icon.svg"></a>
-
         </div>
-
+`;
+  var indicatorButtons = `
         <!-- Indicators -->
         <div id="indicators">
 
           <div id="repo-links">
             <!-- Releases -->
-            <a class="indicator" href="${repo}/releases" target="_blank">Releases</a>
+            <a class="indicator" href="${indicatorButton1Link}/releases" target="_blank">${indicatorButton1Text}</a>
 
             <p class="indicator indicator-separator">•</p>
 
             <!-- Repository -->
-            <a class="indicator" href="${repo}" target="_blank">Repository</a>
+            <a class="indicator" href="${indicatorButton2Link}" target="_blank">${indicatorButton2Text}</a>
           </div>
-
         </div>
+        `;
+
+  // For images, they have to be named: assets/image1.png assets/image2.png assets/image3.png
+  var info1 = `
       </div>
 
       <div class="padding-large"></div>
       <div class="padding-large"></div>
       <div class="padding-small"></div>
-
-      <!-- ----------------------------------------------------------------------- -->
-      <!--                                Section 2                                -->
-      <!-- ----------------------------------------------------------------------- -->
-      <div id="section-2">
 
         <!-- How does it work -->
         <div class="blurb">
@@ -184,7 +196,8 @@ document.getElementById("generateButton").addEventListener("click", () => {
 
         <div class="padding-blurb"></div>
 
-        <!-- Key support -->
+`;
+  var info2 = `
         <div class="blurb">
           <h3>${bodyTitle2}</h3>
           <div class="padding-small"></div>
@@ -199,16 +212,26 @@ document.getElementById("generateButton").addEventListener("click", () => {
         <div class="center-image">
           <img id="settings-window-image" src="assets/image2.png">
         </div>
+`;
 
-      </div>
+  var info3 = `
+        <div class="blurb">
+          <h3>${bodyTitle3}</h3>
+          <div class="padding-small"></div>
+          <span id="emoji-magnifying-glass" class="emoji">${bodyEmoji3}</span>
+        </div>
+        <p>
+          ${bodySubtitle3}
+        </p>
+        <div class="center-image">
+          <img id="image1" src="assets/image3.png">
+        </div>
 
       <hr>
+`;
 
-      <!-- ----------------------------------------------------------------------- -->
-      <!--                                Section 3                                -->
-      <!-- ----------------------------------------------------------------------- -->
+  var faqs = `
       <div id="faq">
-
         <!-- FAQ -->
         <h2>Frequently asked questions</h2>
 
@@ -220,7 +243,6 @@ document.getElementById("generateButton").addEventListener("click", () => {
           <p>${a1}</p>
         </div>
 
-        <!-- Localization Question -->
         <div class="padding-faq-block">
           <h4>${q2}</h4>
           <p>${a2}</p>
@@ -251,6 +273,8 @@ document.getElementById("generateButton").addEventListener("click", () => {
           </h3>
         </div>
       </div>
+`;
+  var footer = `
 
       <!-- Footer -->
       <div id="footer">
@@ -278,6 +302,6 @@ document.getElementById("generateButton").addEventListener("click", () => {
 </html>
   `;
 
-  console.log(html);
-  document.getElementById("websiteCode").innerHTML = html;
+  // console.log(html);
+  // document.getElementById("websiteCode").innerHTML = html;
 });
