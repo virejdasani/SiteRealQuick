@@ -226,40 +226,43 @@ document.getElementById("generateButton").addEventListener("click", () => {
         <div class="center-image">
           <img id="image1" src="assets/image3.png">
         </div>
-
-      <hr>
 `;
 
-  var faqs = `
+  var faq1 = `
+  <hr>
       <div id="faq">
         <!-- FAQ -->
         <h2>Frequently asked questions</h2>
 
         <div class="padding"></div>
 
-        <!-- Question 2 -->
+        <!-- Question 1 -->
         <div class="padding-faq-block">
           <h4>${q1}</h4>
           <p>${a1}</p>
         </div>
-
+`;
+  var faq2 = `
         <div class="padding-faq-block">
           <h4>${q2}</h4>
           <p>${a2}</p>
         </div>
-
+`;
+  var faq3 = `
         <!-- Compatibility Question -->
         <div class="padding-faq-block">
           <h4>${q3}</h4>
           <p>${a3}</p>
         </div>
-
+`;
+  var faq4 = `
         <!-- Question 4 -->
         <div class="padding-faq-block" id="privacy">
           <h4>${q4}</h4>
           <p>${a4}</p>
         </div>
-
+`;
+  var faqEnd = `
         <!-- Extra padding -->
         <div class="padding-faq-block"></div>
 
@@ -275,7 +278,6 @@ document.getElementById("generateButton").addEventListener("click", () => {
       </div>
 `;
   var footer = `
-
       <!-- Footer -->
       <div id="footer">
 
