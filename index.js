@@ -1,3 +1,5 @@
+
+
 document.getElementById("generateButton").addEventListener("click", () => {
   var siteTitle = document.getElementById("siteTitle").value;
   var headerLink1 = document.getElementById(headerLink1).value;
