@@ -1,3 +1,4 @@
-.resizable {
-  resize: both;
+hr {
+  padding-bottom: 30px;
+  border-top: solid rgb(171, 171, 171);
 }
