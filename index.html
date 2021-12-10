@@ -14,125 +14,17 @@
 
 <body>
 
-  <h1>Site Real Quick</h1>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <p class="mt-12 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+        Site Real Quick
+      </p>
+    </div>
+  </div>
 
-  <!-- <h3>siteTitle</h3>
-  <input type="text" name="title" id="siteTitle">
+  <form id="main" class="container mx-auto px-14 flex flex-col justify-between items-center relative py-10">
 
-  <h3>tagline</h3>
-  <input type="text" name="tagline" id="tagline"> -->
-
-  <!-- <h3>headerLink1</h3>
-  <input type="text" name="headerLink1" id="headerLink1">
-
-  <h3>headerLink2</h3>
-  <input type="text" name="headerLink2" id="headerLink2">
-
-  <h3>headerText1</h3>
-  <input type="text" name="headerText1" id="headerText1">
-
-  <h3>headerText2</h3>
-  <input type="text" name="headerText2" id="headerText2"> -->
-  <!-- 
-  <h3>button1Link</h3>
-  <input type="text" name="button1Link" id="button1Link">
-
-  <h3>button1Text</h3>
-  <input type="text" name="button1Text" id="button1Text"> -->
-
-  <!-- <h3>button2Link</h3>
-  <input type="text" name="button2Link" id="button2Link">
-
-  <h3>button2Text</h3>
-  <input type="text" name="button2Text" id="button2Text">
-
-  <h3>button3Link</h3>
-  <input type="text" name="button3Link" id="button3Link">
-
-  <h3>button3Text</h3>
-  <input type="text" name="button3Text" id="button3Text"> -->
-
-  <!-- <h3>youtubeVideo</h3>
-  <input type="text" name="youtubeVideoId" id="youtubeVideoId"> -->
-
-  <h3>thisWebsite</h3>
-  <input type="text" name="thisWebsite" id="thisWebsite">
-
-  <!-- <h3>indicatorButton1Text</h3>
-  <input type="text" name="indicatorButton1Text" id="indicatorButton1Text">
-
-  <h3>indicatorButton2Text</h3>
-  <input type="text" name="indicatorButton2Text" id="indicatorButton2Text">
-
-  <h3>indicatorButton1Link</h3>
-  <input type="text" name="indicatorButton1Link" id="indicatorButton1Link">
-
-  <h3>indicatorButton2Link</h3>
-  <input type="text" name="indicatorButton2Link" id="indicatorButton2Link"> -->
-
-  <!-- <h3>bodyTitle1</h3>
-  <input type="text" name="bodyTitle1" id="bodyTitle1"> -->
-
-  <!-- <h3>bodyEmoji1</h3>
-  <input type="text" name="bodyEmoji1" id="bodyEmoji1">
-
-  <h3>bodySubtitle1</h3>
-  <input type="text" name="bodySubtitle1" id="bodySubtitle1">
-
-  <h3>bodyTitle2</h3>
-  <input type="text" name="bodyTitle2" id="bodyTitle2">
-
-  <h3>bodyEmoji2</h3>
-  <input type="text" name="bodyEmoji2" id="bodyEmoji2">
-
-  <h3>bodySubtitle2</h3>
-  <input type="text" name="bodySubtitle2" id="bodySubtitle2"> -->
-
-  <h3>q1</h3>
-  <input type="text" name="q1" id="q1">
-
-  <h3>a1</h3>
-  <input type="text" name="a1" id="a1">
-
-  <h3>q2</h3>
-  <input type="text" name="q2" id="q2">
-
-  <h3>a2</h3>
-  <input type="text" name="a2" id="a2">
-
-  <h3>q3</h3>
-  <input type="text" name="q3" id="q3">
-
-  <h3>a3</h3>
-  <input type="text" name="a3" id="a3">
-
-  <h3>q4</h3>
-  <input type="text" name="q4" id="q4">
-
-  <h3>a4</h3>
-  <input type="text" name="a4" id="a4">
-
-  <h3>repo</h3>
-  <input type="text" name="repo" id="repo">
-
-  <h3>author</h3>
-  <input type="text" name="author" id="author">
-
-  <h3>authorWebsite</h3>
-  <input type="text" name="authorWebsite" id="authorWebsite">
-
-  <h3>email</h3>
-  <input type="text" name="email" id="email">
-
-  </br>
-  </br>
-  <button id="generateButton">Generate Website</button>
-
-  <!-- <div id="websiteCode">hi</div> -->
-
-  <form id="main" class="container mx-auto px-6 flex flex-col justify-between items-center relative py-14">
-
-    <div class="w-full max-w-lg">
+    <div class="w-full w-full bg-gray-400 px-14 py-8 rounded-lg bg-opacity-50 border border-gray-400 shadow-2xl">
       <div class="flex flex-wrap -mx-3 mb-6">
         <div class="w-full px-3">
           <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="siteTitle">
@@ -154,6 +46,17 @@
             class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
             id="tagline" type="text" placeholder="eg: Make websites quickly! ">
           <!-- <p class="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p> -->
+        </div>
+      </div>
+
+      <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full px-3">
+          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="repo">
+            GitHub repo
+          </label>
+          <input
+            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            id="repo" type="text" placeholder="eg: https://github.com/virejdasani/SiteRealQuick">
         </div>
       </div>
 
@@ -385,8 +288,142 @@
 
       <hr>
 
+      <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="q1">
+            Question 1
+          </label>
+          <textarea
+            class="resize-y appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            id="q1" type="text" placeholder="eg: Does your app require a subscription?"></textarea>
+          <!-- <p class="text-red-500 text-xs italic">Please fill out this field.</p> -->
+        </div>
+        <div class="w-full md:w-1/2 px-3">
+          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="a1">
+            Answer 1
+          </label>
+          <textarea
+            class="resize-y appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            id="a1" type="text" placeholder="eg: Nope. our app is completely free to use!"></textarea>
+        </div>
+      </div>
 
-      <div class="flex flex-wrap -mx-3 mb-2">
+      <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="q2">
+            Question 2
+          </label>
+          <textarea
+            class="resize-y appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            id="q2" type="text" placeholder="eg: With what technologies is our app made?"></textarea>
+          <!-- <p class="text-red-500 text-xs italic">Please fill out this field.</p> -->
+        </div>
+        <div class="w-full md:w-1/2 px-3">
+          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="a2">
+            Answer 2
+          </label>
+          <textarea
+            class="resize-y appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            id="a2" type="text" placeholder="eg: Our app is made using the React framework!"></textarea>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="q3">
+            Question 3
+          </label>
+          <textarea
+            class="resize-y appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            id="q3" type="text" placeholder="eg: Compatibility"></textarea>
+          <!-- <p class="text-red-500 text-xs italic">Please fill out this field.</p> -->
+        </div>
+        <div class="w-full md:w-1/2 px-3">
+          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="a3">
+            Answer 3
+          </label>
+          <textarea
+            class="resize-y appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            id="a3" type="text" placeholder="eg: Our app works on Windows, MacOS, and Linux"></textarea>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="q4">
+            Question 4
+          </label>
+          <textarea
+            class="resize-y appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            id="q4" type="text" placeholder="eg: What's our apps Privacy Policy?"></textarea>
+          <!-- <p class="text-red-500 text-xs italic">Please fill out this field.</p> -->
+        </div>
+        <div class="w-full md:w-1/2 px-3">
+          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="a4">
+            Answer 4
+          </label>
+          <textarea
+            class="resize-y appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            id="a4" type="text" placeholder="eg: We do not collect any data at all!"></textarea>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full px-3">
+          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="thisWebsite">
+            URL of this website
+          </label>
+          <input
+            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            id="thisWebsite" type="text" placeholder="eg: https://websiteformyapp.com">
+          <!-- <p class="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p> -->
+        </div>
+      </div>
+
+
+      <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full px-3">
+          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="author">
+            Product Maker Name
+          </label>
+          <input
+            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            id="author" type="text" placeholder="eg: Virej Dasani">
+          <!-- <p class="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p> -->
+        </div>
+      </div>
+
+      <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full px-3">
+          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="authorWebsite">
+            Product Maker Website
+          </label>
+          <input
+            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            id="authorWebsite" type="text" placeholder="eg: https://virejdasani.github.io/">
+          <!-- <p class="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p> -->
+        </div>
+      </div>
+
+      <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full px-3">
+          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="email">
+            Product Maker Email
+          </label>
+          <input
+            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            id="email" type="text" placeholder="eg: https://virejdasani.github.io/">
+          <!-- <p class="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p> -->
+        </div>
+      </div>
+
+      <button id="generateButton" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Generate Website
+      </button>
+
+      <!-- <div class="flex flex-wrap -mx-3 mb-2">
         <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
           <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
             City
@@ -421,7 +458,7 @@
             class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
             id="grid-zip" type="text" placeholder="90210">
         </div>
-      </div>
+      </div> -->
     </div>
 
   </form>

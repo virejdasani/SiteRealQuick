@@ -1,4 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+body {
+  /* background-image: url("./assets/whiteGlossBackground.png"); */
+  background: radial-gradient(82.95% 212.36% at 0 90.67%, #eaa6a6 0, #ffb4b4 34.74%, #86aef9 100%);
+}
+
 hr {
   padding-bottom: 30px;
-  border-top: solid rgb(171, 171, 171);
+  border-top: solid rgb(95, 95, 95);
+}
+
+/* Mobile Only */
+@media only screen and (max-width: 425px) {
+  body {
+    /* background-size: 1200%; */
+  }
+}
+
+/* Mobile Design - Tablet */
+@media only screen and (max-width: 999px) {
+  body {
+    /* background-size: 1200%; */
+  }
+}
+
+/* Desktop Design */
+@media only screen and (min-width: 1000px) {
+  body {
+    /* background-size: 700%; */
+  }
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
 }
