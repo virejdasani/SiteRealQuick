@@ -1,9 +1,12 @@
+console.log("object");
 
+// document.getElementById("generateButton").addEventListener("click", () => {
+function generate() {
+  console.log("object");
 
-document.getElementById("generateButton").addEventListener("click", () => {
   var siteTitle = document.getElementById("siteTitle").value;
-  var headerLink1 = document.getElementById(headerLink1).value;
-  var headerLink2 = document.getElementById(headerLink2).value;
+  var headerLink1 = document.getElementById("headerLink1").value;
+  var headerLink2 = document.getElementById("headerLink2").value;
   var tagline = document.getElementById("tagline").value;
   var button1Link = document.getElementById("button1Link").value;
   var button1Text = document.getElementById("button1Text").value;
@@ -31,6 +34,9 @@ document.getElementById("generateButton").addEventListener("click", () => {
   var bodyTitle2 = document.getElementById("bodyTitle2").value;
   var bodyEmoji2 = document.getElementById("bodyEmoji2").value;
   var bodySubtitle2 = document.getElementById("bodySubtitle2").value;
+  var bodyTitle3 = document.getElementById("bodyTitle3").value;
+  var bodyEmoji3 = document.getElementById("bodyEmoji3").value;
+  var bodySubtitle3 = document.getElementById("bodySubtitle3").value;
   var q1 = document.getElementById("q1").value;
   var a1 = document.getElementById("a1").value;
   var q2 = document.getElementById("q2").value;
@@ -308,4 +314,33 @@ document.getElementById("generateButton").addEventListener("click", () => {
 
   // console.log(html);
   // document.getElementById("websiteCode").innerHTML = html;
-});
+
+  var generatedSite =
+    head +
+    navbar +
+    main +
+    youtubeVideo +
+    downloadButtons +
+    indicatorButtons +
+    info1 +
+    info2 +
+    info3 +
+    faq1 +
+    faq2 +
+    faq3 +
+    faq4 +
+    faqEnd +
+    footer;
+
+  // var iframe = document.getElementById("iframe").append
+
+  var iframe = document.getElementById("iframe");
+  iframe =
+    iframe.contentWindow ||
+    iframe.contentDocument.document ||
+    iframe.contentDocument;
+
+  iframe.document.open();
+  iframe.document.write(generatedSite);
+  iframe.document.close();
+}
