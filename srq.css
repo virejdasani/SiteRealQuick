@@ -6,7 +6,7 @@ body {
 }
 
 hr {
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   border-top: solid rgb(95, 95, 95);
 }
 
@@ -31,6 +31,6 @@ hr {
   }
 }
 
-p {
+.poppins {
   font-family: 'Poppins', sans-serif;
 }
